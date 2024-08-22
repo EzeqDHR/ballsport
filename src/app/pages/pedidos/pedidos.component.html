@@ -1,0 +1,36 @@
+<app-nav></app-nav>
+<h1>Pedidos pendientes</h1>
+<table  class="table table-striped">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Fecha</th>
+            <th>Monto</th>
+            <th>Forma de Pago</th>
+            <th>Estado</th>
+            <th>Acciones</th>
+            
+        </tr>
+    </thead>
+    
+    @for (item of pedidosList; track item.id)
+    {
+        <tr>
+            <td>{{item.nombre}}</td>
+            <td>{{item.apellido}}</td>
+            <td>{{item.fecha}}</td>
+            <td>{{item.monto | currency : '$'}}</td>
+            <td>{{item.formDePago}}</td>
+            <td>{{item.Estado}}</td>
+            <td><button class="btn btn-primary">Editar Estado</button><button class="btn btn-danger">Eliminar</button></td>
+        </tr>
+    }
+
+    @empty{
+        <div>
+            No hay Productos
+        </div>
+    }
+</table>
+<app-footer></app-footer>

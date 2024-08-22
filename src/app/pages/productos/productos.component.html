@@ -1,0 +1,35 @@
+<app-nav></app-nav>
+
+<h1>Productos</h1>
+<table  class="table table-striped">
+    <thead>
+        <tr>
+            <th>Código de Producto</th>
+            <th>Nombre del producto</th>
+            <th>Precio unitario</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    
+    @for (item of producList; track item.id)
+    {
+        <tr>
+            <td>{{item.codProducto}}</td>
+            <td>{{item.producto}}</td>
+            <td>{{item.precio}}</td>
+            <td><button class="btn btn-primary">Editar</button><button class="btn btn-danger">Eliminar</button></td>
+        </tr>
+    }
+
+    @empty{
+        <div>
+            No hay Productos
+        </div>
+    }
+    <div>
+        <button class="btn btn-secondary rounded-pill px-3" type="button">Agregar producto</button>
+
+    </div>
+</table>
+
+<app-footer></app-footer>

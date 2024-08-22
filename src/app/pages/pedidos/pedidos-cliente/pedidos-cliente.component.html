@@ -1,0 +1,17 @@
+<app-nav></app-nav>
+<h1>Mis pedidos</h1>
+<div class="row mb-3 text-center">
+    <div class="col-4 themed-grid-col">Fecha</div>
+    <div class="col-4 themed-grid-col">Monto</div>
+    <div class="col-4 themed-grid-col">Estado</div>
+  </div>
+  @for (item of pedidosClienteList; track item.id)
+  {
+  <div class="row mb-3 text-center">
+    <div class="col-sm-4 themed-grid-col">{{item.fecha}}</div>
+    <div class="col-sm-4 themed-grid-col">{{item.monto | currency : '$'}}</div>
+    <div class="col-sm-4 themed-grid-col">{{item.estado}}</div>
+  </div>
+  <td><button class="btn btn-primary">Seguir pedido</button></td>
+  } 
+<app-footer></app-footer>
