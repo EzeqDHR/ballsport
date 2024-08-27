@@ -1,18 +1,18 @@
-import { Component, Pipe } from '@angular/core';
+import { Component } from '@angular/core';
+import { RouterLink, RouterOutlet } from '@angular/router';
 import { NavComponent } from '../../shared/nav/nav.component';
 import { FooterComponent } from '../../shared/footer/footer.component';
 import { DatosService } from '../../services/datos.service';
-import { CurrencyPipe, DatePipe } from '@angular/common';
-import { RouterLink, RouterOutlet } from '@angular/router';
+import { CurrencyPipe } from '@angular/common';
 
 @Component({
-  selector: 'app-carrito',
+  selector: 'app-formulario',
   standalone: true,
-  imports: [NavComponent, FooterComponent, CurrencyPipe, DatePipe, RouterLink, RouterOutlet],
-  templateUrl: './carrito.component.html',
-  styleUrl: './carrito.component.css'
+  imports: [RouterLink, RouterOutlet, NavComponent, FooterComponent, CurrencyPipe],
+  templateUrl: './formulario.component.html',
+  styleUrl: './formulario.component.css'
 })
-export class CarritoComponent {
+export class FormularioComponent {
   poductosClienteList:any;
   constructor(private pedidosFirebase:DatosService)
   {

@@ -48,7 +48,7 @@ export class DatosService {
 
   cerrarSesion(){
     this.userLoginOn.next(false);
-    this.userRol.next("cliente");
+    this.userRol.next("invitado");
     localStorage.removeItem("userId");
   }
 
@@ -70,6 +70,13 @@ export class DatosService {
       idfield:'id'
     }) as Observable<any>;
   }
+  getProductosCliente():Observable<any>
+    { const userId =  localStorage.getItem("userId") ? localStorage.getItem("userId") : "";
+      const route= `users/${userId}/Pedidos/GN7tWlhQC357bIFHEFhH/productos`.replace(/"/g, '')
+      return collectionData(collection(this.firestore,route),{
+        idField:'id'
+      }) as Observable<any>;
+    }
   obtenerTask(): Observable<any> 
   { const userId =  localStorage.getItem("userId") ? localStorage.getItem("userId") : "";
     const route= `users/${userId}/tasks`.replace(/"/g, '')

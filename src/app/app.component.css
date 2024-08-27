@@ -1,0 +1,8 @@
+div{
+    max-width: 80%;
+    border: solid 3px black;
+    padding: .5%;
+    margin: 2% auto;
+    border-radius: 10px;
+    background-color: rgb(230, 222, 222);
+}

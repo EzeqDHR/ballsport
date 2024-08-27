@@ -1,5 +1,5 @@
-<div class="row mb-3 text-center mx-auto">
-    <h1>Carrito</h1>
+  <div class="row mb-3 text-center mx-auto">
+    <h1>Formulario</h1>
     <div class="col-3 themed-grid-col">Producto</div>
     <div class="col-3 themed-grid-col">Cantidad</div>
     <div class="col-3 themed-grid-col">Precio Unitario</div>
@@ -8,10 +8,10 @@
   @for (item of poductosClienteList; track item.id)
   {
   <div class="row mb- text-center mx-auto" style="flex-wrap: nowrap;">
-    <div class="col-3 themed-grid-col">{{item.producto}}</div>
-    <div class="col-3 themed-grid-col">{{item.cantidad}}</div>
-    <div class="col-3 themed-grid-col">{{item.precio | currency : '$'}}</div>
-    <div class="col-3 d-flex gap-3 p-1"><button class="btn btn-primary " routerLink="/formulario">Editar</button></div>
+    <div class="col-sm-3 themed-grid-col">{{item.producto}}</div>
+    <div class="col-sm-3 themed-grid-col">{{item.cantidad}}</div>
+    <div class="col-sm-3 themed-grid-col">{{item.precio | currency : '$'}}</div>
+    <div class="col-3 d-flex gap-3 p-1"><button class="btn btn-primary">Editar</button></div>
   </div>
   }
   <div class="col-3 d-flex gap-3 p-1"><button class="btn btn-primary" routerLink="/cliente">Seguir pedido</button></div>

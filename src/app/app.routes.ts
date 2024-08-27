@@ -7,6 +7,7 @@ import { ProductosComponent } from './pages/productos/productos.component';
 import { CarritoComponent } from './pages/carrito/carrito.component';
 import { PedidosComponent } from './pages/pedidos/pedidos.component';
 import { PedidosClienteComponent } from './pages/pedidos/pedidos-cliente/pedidos-cliente.component';
+import { FormularioComponent } from './carrito/formulario/formulario.component';
 
 
 export const routes: Routes = [
@@ -15,7 +16,8 @@ export const routes: Routes = [
    {path:'cliente',component:DashboardClienteComponent},
    {path:'productos',component:ProductosComponent},
    {path:'carrito', component:CarritoComponent},
-   {path: 'pedidos', component:PedidosComponent}, 
-   {path:'pedidos-cliente',component:PedidosClienteComponent}   
+   {path:'pedidos', component:PedidosComponent}, 
+   {path:'pedidos-cliente',component:PedidosClienteComponent},
+   {path:'formulario', component:FormularioComponent} 
    
 ];

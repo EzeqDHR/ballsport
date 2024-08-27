@@ -31,4 +31,8 @@ export class NavComponent {
 
   }
   
+  cerrarSesion()
+  {
+    this.loginService.cerrarSesion()
+  }
 }
